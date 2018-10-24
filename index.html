@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>My Blog</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+    <script src='../dist/textAngular-rangy.min.js'></script>
+    
+      <script src='../dist/textAngular-sanitize.min.js'></script>
+    
+      <script src='../dist/textAngular.min.js'></script>
+
+    <!--Firebase Header-->
+  <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+
+  
+  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+ <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBQOQdmrv2hK4_r3hmoRXEBS_jY0m5jfVY",
+    authDomain: "blog-app-da9dc.firebaseapp.com",
+    databaseURL: "https://blog-app-da9dc.firebaseio.com",
+    projectId: "blog-app-da9dc",
+    storageBucket: "blog-app-da9dc.appspot.com",
+    messagingSenderId: "659100023549"
+  };
+  firebase.initializeApp(config);
+</script>
+<style>
+  .card.cover img {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+@media all and (max-width: 425px) {
+  .ng-binding img {
+    width: 100% !important;
+    height: initial !important;
+    text-align: center;
+  }
+}
+</style>
+
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Page level plugin CSS-->
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../dist/textAngular.css" type="text/css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+
+    <!-- <link href="css/clean-blog.css" rel="stylesheet">
+
+     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+   <!--  <base href="/"> -->
+  </head>
+
+  <body id="page-top" ng-app="angularCms">
+
+    <main>
+      <div ui-view></div>
+    </main>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Page level plugin JavaScript-->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+
+    <!-- Demo scripts for this page-->
+    <script src="js/demo/datatables-demo.js"></script>
+    <script src="js/demo/chart-area-demo.js"></script>
+
+    <script src="app.js"></script>
+
+  </body>
+
+</html>

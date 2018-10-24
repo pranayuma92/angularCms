@@ -1,0 +1,39 @@
+
+
+    <div class="container">
+      <div class="card card-register mx-auto mt-5">
+        <div class="card-header">Register an Account</div>
+        <div class="card-body">
+          <form name="signupForm" id="signup-form1">
+             <div class="form-group">
+              <div class="form-label-group">
+                <input type="text" id="inputNama" class="form-control" placeholder="Nama" required="required" ng-model="user.name">
+                <label for="inputNama">Nama</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-label-group">
+                <input type="text" id="inputTelepon" class="form-control" placeholder="Telepon" required="required" ng-model="user.phone">
+                <label for="inputTelepon">Telepon</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="required" ng-model="user.email">
+                <label for="inputEmail">Email address</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Kata Sandi" required="required" ng-model="user.password">
+                <label for="inputPassword">Kata Sandi</label>
+              </div>
+            </div>
+            <a class="btn btn-primary btn-block"ng-click="signupEmail(signupForm,user)" >Register</a>
+          </form>
+          <div class="text-center">
+            <a class="d-block small mt-3" href="#/login">Login Page</a>
+          </div>
+        </div>
+      </div>
+    </div>

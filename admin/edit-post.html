@@ -1,0 +1,53 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="#/admin/all-post">Admin</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="#/admin/all-post">All Post</a>
+  </li>
+  <li class="breadcrumb-item active">{{post.title}}</li>
+</ol>
+<div class="row">
+   <div class="col-md-8">
+ <div class="form-group">
+              <label for="inputTitle"><h3>Title</h3></label>
+                <input type="text" id="inputTitle" class="form-control" placeholder="Title" required="required" autofocus="autofocus" ng-model="post.title">
+                
+             
+            </div>
+    <div class="form-group">
+      <label for="inputCover"><h3>Cover Image URL</h3></label>
+      <input type="text" id="inputCover" class="form-control" placeholder="Cover image here..." required="required" autofocus="autofocus" ng-model="post.image">
+    </div>
+             <h3>Content</h3>
+<div text-angular="text-angular" name="post.content" ng-model="post.content" ta-disabled='disabled'></div>
+       <!--  <h1>Raw HTML in a text area</h1>
+        <textarea ng-model="htmlcontent" style="width: 100%"></textarea>
+        <div ng-bind-html="htmlcontent"></div> --><br>
+         <button class="btn btn-success" type="button" ng-click="updatePost(post)">
+            <span ng-if="post.status == 'draft'">Publish</span>
+            <span ng-if="post.status == 'published'">Update</span>
+         </button>
+         <button class="btn btn-primary" ng-disabled="post.status == 'draft'" type="button" ng-click="draftPost(post)">Save to draft</button>
+         <button class="btn btn-danger" type="button" ng-click="deletePost(post)">Delete this post</button>
+         <button class="btn btn-secondary" type="button" ui-sref="admin.all-post">Cancel</button>
+       </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Post Info</h5>
+              <p class="card-text">
+                <p>Post status : <strong style="color:red">{{post.status}}</strong></p>
+                <p>Author : <strong>{{post.author}}</strong></p>
+                <p>Create at : <strong>{{post.createAt}}</strong></p>
+                <p>Last update : <strong>{{post.lastUpdate}}</strong></p>
+              </p>
+            </div>
+          </div>
+          <br>
+          <div class="card cover">
+            <img ng-src="{{post.image}}" />
+          </div>
+        </div>
+       </div>

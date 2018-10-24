@@ -1,0 +1,13 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="#/admin/all-post">Admin</a>
+    </li>
+    <li class="breadcrumb-item active">All Post</li>
+</ol>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item d-flex justify-content-between align-items-center" ng-repeat="post in postData | orderBy:reverse:true">
+	  <a ui-sref="admin.edit-post({postID: post.$id})"><b>{{$index+1}}. {{post.title}}</b></a>
+	  <span ng-if="post.status == 'draft'" class="badge badge-danger">{{post.status}}</span>
+	  <span ng-if="post.status == 'published'" class="badge badge-success">{{post.status}}</span>
+	</li>
+</ul>

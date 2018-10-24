@@ -1,0 +1,22 @@
+<ol class="breadcrumb">
+	<li class="breadcrumb-item">
+	  <a href="#/admin/all-post">Admin</a>
+	</li>
+	<li class="breadcrumb-item active">Add Post</li>
+</ol>
+ <div class="form-group">
+ <label for="inputTitle"><h3>Title</h3></label>           
+                <input type="text" id="inputTitle" class="form-control" placeholder="Title" required="required" autofocus="autofocus" ng-model="post.title">
+                
+            </div>
+            <div class="form-group">
+      <label for="inputCover"><h3>Cover Image URL</h3></label>
+      <input type="text" id="inputCover" class="form-control" placeholder="Cover image here..." required="required" autofocus="autofocus" ng-model="post.image">
+    </div>
+             <h3>Content</h3>
+<div text-angular="text-angular" name="post.content" ng-model="post.content" ta-disabled='disabled'></div>
+       <!--  <h1>Raw HTML in a text area</h1>
+        <textarea ng-model="htmlcontent" style="width: 100%"></textarea>
+        <div ng-bind-html="htmlcontent"></div> --><br>
+         <button class="btn btn-success" type="button" ng-click="submitPost(post)">Publish</button>
+         <button class="btn btn-primary" type="button" ng-click="draftPost(post)">Save to draft</button>
